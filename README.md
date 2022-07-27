@@ -17,6 +17,7 @@ Fixer API to request and receive real time conversion rates.
 ### Dependencies
 
 The user must install RabbitMQ and the Erlang virtual machine. User must also need to install the packages for pika and requests in Python.
+User must also be connected to the Internet.
 
 ### Installing
 
@@ -26,12 +27,65 @@ The user must install RabbitMQ and the Erlang virtual machine. User must also ne
 
 * Requesting Data
 1) User will start 2 python programs named send.py and receive.py on their desired IDEs or applications.
-2) User will then go to send.py window and will see a command to input 
+2) User will then go to send.py window and will see a command to enter an input for a starting amount.
 ```
 Please type in an amount that you wish to convert
 Amount:
 ```
+3) User will then be able to enter an input for a starting and desired currency.
+```
+Please type in any STARTING CURRENCY using a 3 letter code.
+For example these are the top 5 most traded currencies in the world
+USD - US dollar
+EUR - Euro
+JPY - Japanese yen
+GBP - Pound sterling
+AUD- Australian dollar 
+FROM:USD
+Now choose a DESIRED CURRENCY to convert to
+TO: EUR
+```
+4) User will have to wait a couple seconds for the API to receive this input and return data.
+5) User will then recieve a notification stating that API data has been received and sent to the other python file.
+6) User will be asked if they would like to start the conversion service again.
+```
+ [*] Waiting for messages. To exit press CTRL+C
 
+```
+
+* Receiving Data
+1) User will go to window for receive.py and will see the program waiting for messages and the data that was sent. 
+   
+```
+{
+[*] Waiting for messages. To exit press CTRL+C
+```
+2) Program will collect data into a variable in the program in JSON string format and another variable in 
+   Python dictionary format. JSON and converted amount will both be printed out for the user to see.
+```
+{
+    "success": true,
+    "query": {
+        "from": "USD",
+        "to": "EUR",
+        "amount": 100
+    },
+    "info": {
+        "timestamp": 1658885285,
+        "rate": 0.985985
+    },
+    "date": "2022-07-27",
+    "result": 98.5985
+}
+
+98.5985
+```
+4) User will have to wait a couple seconds for the API to receive this input and return data.
+5) User will then recieve a notification stating that API data has been received and sent to the other python file.
+6) User will be asked if they would like to start the conversion service again.
+```
+ [x] Sent 'DATA'
+Run again? (y/n): 
 ## Help
 
 
