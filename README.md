@@ -11,7 +11,7 @@ UML sequence diagram showing how requesting and receiving data work. Make it det
 
 ## Microservice
 Microservice will take input from the user to return an amount that has been converted from one currency to another.
-It will be using RabbitMQ as the message broker between sender and recieever. Program will also being using 
+It will be using RabbitMQ as the message broker between sender and receiver. Program will also be using 
 Fixer API to request and receive real time conversion rates.
 
 ### Dependencies
@@ -46,10 +46,11 @@ Now choose a DESIRED CURRENCY to convert to
 TO: EUR
 ```
 4) User will have to wait a couple seconds for the API to receive this input and return data.
-5) User will then recieve a notification stating that API data has been received and sent to the other python file.
+5) User will then receive a notification stating that API data has been received and sent to the other python file.
 6) User will be asked if they would like to start the conversion service again.
 ```
- [*] Waiting for messages. To exit press CTRL+C
+  [x] Sent 'DATA'
+Run again? (y/n): 
 
 ```
 
