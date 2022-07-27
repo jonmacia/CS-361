@@ -62,6 +62,7 @@ TO: EUR
 ```
 2) Program will collect data into a variable in the program in JSON string format and another variable in 
    Python dictionary format. JSON and converted amount will both be printed out for the user to see.
+   User should be able to extract from these two variables.
 ```
 {
     "success": true,
@@ -80,16 +81,8 @@ TO: EUR
 
 98.5985
 ```
-4) User will have to wait a couple seconds for the API to receive this input and return data.
-5) User will then recieve a notification stating that API data has been received and sent to the other python file.
-6) User will be asked if they would like to start the conversion service again.
-```
- [x] Sent 'DATA'
-Run again? (y/n): 
-## Help
+3) receive.py runs on an infinite loop that will be able to collect more messages(conversions) for the user.
 
-
-```
 
 ## Authors
 
