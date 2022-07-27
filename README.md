@@ -84,6 +84,8 @@ Run again? (y/n):
 ```
 3) receive.py runs on an infinite loop that will be able to collect more messages(conversions) for the user.
 
+![My Image](UML-EXPORT.jpg)
+
 
 ## Authors
 
